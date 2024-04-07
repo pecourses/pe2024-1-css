@@ -1,11 +1,21 @@
-p {
-  color: red;
+.sub-head {
+  color: blue;
 }
 
-.sub-head {
-  color: green;
+p {
+  color: red !important;
 }
 
 #best-h2 {
-  color: purple;
+}
+/*
+type - 0001
+class - 0010
+id - 0100
+inline - 1000
+*/
+
+header {
+  color: yellow;
+  font-family: monospace;
 }
