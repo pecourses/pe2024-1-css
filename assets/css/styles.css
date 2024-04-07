@@ -1,21 +1,22 @@
-.sub-head {
-  color: blue;
-}
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
-p {
-  color: red !important;
+body {
+  font-family: "Raleway", sans-serif;
+  background-color: #f1f1f1;
 }
-
-#best-h2 {
-}
-/*
-type - 0001
-class - 0010
-id - 0100
-inline - 1000
-*/
-
 header {
-  color: yellow;
-  font-family: monospace;
+  text-align: center;
+}
+h1 {
+  text-transform: uppercase;
+  font-size: 36px; /* em, rem*/ /*64*/
+  font-weight: 600;
+}
+.sub-main-title {
+  text-align: center;
+  font-size: 15px;
+}
+.black-sub-main-title {
+  background-color: black;
+  color: #f1f1f1;
 }
