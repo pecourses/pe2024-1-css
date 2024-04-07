@@ -1,8 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
-/* * {
-  padding: 0;
-  margin: 0;
-} */
 
 body {
   font-family: "Raleway", Arial, sans-serif;
@@ -20,9 +16,10 @@ header {
 
 h1 {
   text-transform: uppercase;
-  font-size: 36px; /* em, rem*/ /*64*/
+  font-size: 36px;
   font-weight: 600;
 }
+
 h2 {
   font-size: 24px;
   text-transform: uppercase;
@@ -31,40 +28,44 @@ h2 {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+p {
+  font-size: 15px; /* всі p, окрім одного, 15px */
+}
+
 .sub-main-title {
   text-align: center;
-  font-size: 15px;
 }
+
 .black-sub-main-title {
   background-color: black;
   color: #f1f1f1;
 }
+
 .nature-article {
   background-color: white;
-  padding: 15px;
   margin: 10px 0;
 }
+
 .article-title-desc {
-  font-size: 18px;
+  font-size: 18px; /* перевизначимо p, який не 15px */
 }
+
 .article-time {
   color: grey;
 }
+
 .article-main-info {
-  font-size: 15px;
   line-height: 1.5;
-  /* text-indent: 20px; */
-  /* word-spacing: -0.1em;
-  letter-spacing: -0.1em; */
 }
+
 .read-more-link {
-  font-size: 15px;
   border: 1px solid grey;
   font-weight: bold;
   padding: 10px 20px;
 }
+
 .comments {
-  font-size: 15px;
   font-weight: bold;
 }
 
