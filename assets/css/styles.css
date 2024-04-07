@@ -1,12 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+/* * {
+  padding: 0;
+  margin: 0;
+} */
 
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: "Raleway", Arial, sans-serif;
   background-color: #f1f1f1;
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 header {
   text-align: center;
 }
+
 h1 {
   text-transform: uppercase;
   font-size: 36px; /* em, rem*/ /*64*/
@@ -16,6 +27,9 @@ h2 {
   font-size: 24px;
   text-transform: uppercase;
   font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .sub-main-title {
   text-align: center;
@@ -27,10 +41,36 @@ h2 {
 }
 .nature-article {
   background-color: white;
+  padding: 15px;
+  margin: 10px 0;
 }
 .article-title-desc {
   font-size: 18px;
 }
 .article-time {
   color: grey;
+}
+.article-main-info {
+  font-size: 15px;
+  line-height: 1.5;
+  /* text-indent: 20px; */
+  /* word-spacing: -0.1em;
+  letter-spacing: -0.1em; */
+}
+.read-more-link {
+  font-size: 15px;
+  border: 1px solid grey;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+.comments {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.comments-count {
+  color: wheat;
+  font-weight: normal;
+  padding: 2px;
+  background-color: black;
 }
