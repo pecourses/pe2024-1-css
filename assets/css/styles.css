@@ -1,66 +1,32 @@
-@font-face {
-  font-family: "PT Sans";
-  src: url("./../fonts/PT_Sans/PTSans-Regular.ttf");
-}
-
 * {
   box-sizing: border-box;
 }
+/* 
+ ~ всі наступні сіблінги
+ + один наступний сиблінг
+*/
 
-html {
-  font-size: 16px;
+h1 + p {
+  font-style: italic;
+}
+/*
+p + p {
+  margin-top: 20px;
+} */
+
+h1 ~ p {
+  color: blueviolet;
 }
 
-body {
-  font-family: "PT Sans", Helvetica, sans-serif;
-  color: white;
-  line-height: 1.6;
-}
-h1 {
-  font-size: 4rem;
-  margin-bottom: 0.6em;
-}
-
+h1,
 h2 {
-  font-size: 2rem;
-  margin-bottom: 1em;
+  font-weight: 900;
 }
-a {
-  text-decoration: none;
-  color: inherit;
-  font-size: 1rem;
-}
+/*
+ " " - нащадки будь-якого рівня вкладеності
+  > - дочірні елементи
+*/
 
-.main-header {
-  background-color: #252529;
-  color: #eeeeee;
-  font-size: 0;
-}
-
-.nav-list-item {
-  display: inline-block;
-}
-
-.nav-link {
-  display: inline-block;
-  padding: 1em;
-}
-
-.first-section {
-  background-color: #252529;
-  background-image: url("./../images/bg-image.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  min-height: 100vh;
-  padding: 15em 0 1em;
-  text-align: center;
-}
-
-.center-wrapper {
-  max-width: 1276px;
-  width: 100%;
-  min-width: 320px;
-  margin: 0 auto;
-  padding: 0 2em;
+section > p {
+  font-family: monospace;
 }
