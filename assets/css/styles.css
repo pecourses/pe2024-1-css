@@ -1,78 +1,22 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
-
-body {
-  font-family: "Raleway", Arial, sans-serif;
-  background-color: #f1f1f1;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+div {
+  border: 2px red solid;
+  padding: 20px; /* vw, vh, vmin / % / em / rem */
+  margin: 1em;
+  width: 100%;
+  /* height: 100px; */
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-header {
+ul {
   text-align: center;
 }
 
-h1 {
-  text-transform: uppercase;
-  font-size: 36px;
-  font-weight: 600;
-}
-
-h2 {
-  font-size: 24px;
-  text-transform: uppercase;
-  font-weight: 600;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-p {
-  font-size: 15px; /* всі p, окрім одного, 15px */
-}
-
-.sub-main-title {
-  text-align: center;
-}
-
-.black-sub-main-title {
-  background-color: black;
-  color: #f1f1f1;
-}
-
-.nature-article {
-  background-color: white;
-  padding: 15px;
-  margin: 10px 0;
-}
-
-.article-title-desc {
-  font-size: 18px; /* перевизначимо p, який не 15px */
-}
-
-.article-time {
-  color: grey;
-}
-
-.article-main-info {
-  line-height: 1.5;
-}
-
-.read-more-link {
-  border: 1px solid grey;
-  font-weight: bold;
-  padding: 10px 20px;
-}
-
-.comments {
-  font-weight: bold;
-}
-
-.comments-count {
-  color: wheat;
-  font-weight: normal;
-  padding: 2px;
-  background-color: black;
+li {
+  display: inline-block;
+  border: 2px solid green;
+  padding: 2em;
 }
