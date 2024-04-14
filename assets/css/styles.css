@@ -33,12 +33,12 @@ div {
   border: none;
 }
 
-nav {
+footer {
   display: flex;
-  justify-content: space-between;
 }
 
-ul {
-  display: flex;
-  gap: 10px;
+article {
+  border: 5px solid red;
+  width: 33.33%;
+  padding: 10px;
 }
