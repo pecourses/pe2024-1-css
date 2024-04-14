@@ -33,13 +33,20 @@ div {
   border: none;
 }
 
+section {
+  max-width: 1000px;
+  min-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+}
+
 footer {
   display: flex;
-  align-items: center;
+  gap: 15px;
 }
 
 article {
   border: 5px solid red;
-  width: 33.33%;
+  width: 100%;
   padding: 10px;
 }
