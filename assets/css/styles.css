@@ -35,6 +35,7 @@ div {
 
 footer {
   display: flex;
+  align-items: center;
 }
 
 article {
