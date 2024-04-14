@@ -32,21 +32,12 @@ div {
 #painty_root {
   border: none;
 }
-
-section {
-  max-width: 1000px;
-  min-width: 320px;
-  width: 100%;
-  margin: 0 auto;
-}
-
-footer {
+header {
   display: flex;
-  gap: 15px;
-}
-
-article {
-  border: 5px solid red;
-  width: 100%;
-  padding: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  height: 500px;
 }
