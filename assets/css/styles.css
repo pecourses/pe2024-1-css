@@ -1,32 +1,83 @@
 * {
   box-sizing: border-box;
 }
-/* 
- ~ всі наступні сіблінги
- + один наступний сиблінг
-*/
 
-h1 + p {
-  font-style: italic;
-}
-/*
-p + p {
-  margin-top: 20px;
-} */
-
-h1 ~ p {
-  color: blueviolet;
+body {
+  font-family: sans-serif;
+  background-color: antiquewhite;
+  text-align: center;
 }
 
-h1,
-h2 {
-  font-weight: 900;
+.user-card {
+  margin: 20px auto;
+  max-width: 350px;
+  width: 100%;
+  min-width: 250px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 0 5px grey;
+  overflow: hidden;
 }
-/*
- " " - нащадки будь-якого рівня вкладеності
-  > - дочірні елементи
-*/
 
-section > p {
-  font-family: monospace;
+.blue-bg {
+  background-color: #4071f4;
+  height: 100px;
+}
+
+.user-photo-wrapper {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-top: -75px;
+  overflow: hidden;
+  border: 2px solid #4071f4;
+  display: inline-block;
+}
+
+.user-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.content-container {
+  padding: 0 20px 15px;
+}
+
+h2,
+p,
+.links-container,
+.btn-container {
+  margin-bottom: 1em;
+}
+
+.social-link {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  padding: 7px;
+  border-radius: 50%;
+  color: white;
+}
+
+.fb-link {
+  background-color: #3f67b7;
+}
+
+.tw-link {
+  background-color: #1da1f1;
+}
+
+.inst-link {
+  background-color: #e52f6c;
+}
+
+.youtube-link {
+  background-color: #fc0000;
+}
+
+.social-link + .social-link {
+  margin-left: 7px;
 }
