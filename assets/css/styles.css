@@ -1,22 +1,24 @@
 * {
   box-sizing: border-box;
 }
-
 .container {
   border: 2px solid blue;
   padding: 5px;
   height: 200px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   gap: 5px;
 }
-
 .child {
   border: 2px solid green;
   padding: 5px;
 }
 
+.child1 {
+  align-self: flex-end;
+}
 .child4 {
-  margin-left: auto;
+  align-self: stretch;
 }
