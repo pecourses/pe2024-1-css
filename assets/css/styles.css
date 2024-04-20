@@ -1,43 +1,22 @@
 * {
   box-sizing: border-box;
 }
-/* --- flex-container --- */
-section {
-  /* common css */
-  border: 2px solid green;
-  padding: 5px;
-  /* flex properties */
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-}
 
-/* --- flex-child --- */
-div {
-  /* common css */
+.container {
   border: 2px solid blue;
   padding: 5px;
-
-  /*flex properties */
-}
-
-.logo {
-  margin-right: auto;
-}
-
-/* div + div {
-  margin-left: 10px;
-} => gap */
-
-#painty_root {
-  border: none;
-}
-header {
+  height: 200px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  text-align: center;
-  gap: 10px;
-  height: 500px;
+  gap: 5px;
+}
+
+.child {
+  border: 2px solid green;
+  padding: 5px;
+}
+
+.child4 {
+  margin-left: auto;
 }
