@@ -4,20 +4,28 @@
 .container {
   border: 2px solid blue;
   padding: 5px;
-  height: 200px;
   display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 .child {
   border: 2px solid green;
   padding: 5px;
+  /* width: 200px; */
+  height: 200px;
+  /* flex-basis: 300px; */
+  min-width: 200px;
+  max-width: 400px;
+  /* flex-shrink: 1; */
+  /* flex-grow: 1; */
+  flex: 0 1 300px;
 }
-.child3 {
-  order: 1;
+/* 3й елемент може зростати і не може зменшуватись, перенос на 200px */
+.child1 {
+  /* flex-shrink: 2; */
+  /* flex-grow: 2; */
 }
-/* 1 3 5 4 2  */
-.child4 {
-  order: -1;
-}
+
 /* header,
 aside,
 main,
