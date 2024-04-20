@@ -1,34 +1,7 @@
 * {
   box-sizing: border-box;
 }
-.container {
-  border: 2px solid blue;
-  padding: 5px;
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap-reverse;
-  flex-flow: row wrap;
-}
-
-.child {
-  border: 2px solid green;
-  padding: 5px;
-  /* width: 200px; */
-  height: 200px;
-  /* flex-basis: 300px; */
-  min-width: 200px;
-  max-width: 400px;
-  /* flex-shrink: 1; */
-  /* flex-grow: 1; */
-  flex: 0 1 300px;
-}
-/* 3й елемент може зростати і не може зменшуватись, перенос на 200px */
-.child1 {
-  /* flex-shrink: 2; */
-  /* flex-grow: 2; */
-}
-
-/* header,
+header,
 aside,
 main,
 footer {
@@ -46,6 +19,7 @@ body {
   max-width: 800px;
   min-width: 320px;
   width: 100%;
+  flex-grow: 1;
 }
 aside {
   width: 30%;
@@ -55,4 +29,4 @@ main {
 }
 footer {
   margin-top: auto;
-} */
+}
