@@ -3,128 +3,60 @@
 }
 
 html {
-  font-size: clamp(12px, 0.5vw + 0.6em, 16px);
-  --card-grey: grey;
-  --card-yellow: #ffa015;
-  --card-green: #85d387;
-  --card-blue: #8bc9fd;
-}
-
-body {
-  padding: 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  font-size: 16px;
   font-family: sans-serif;
-  line-height: 1.5;
 }
 
-button {
-  cursor: pointer;
+.main-header {
+  background-color: #333;
+  padding: 1em;
 }
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.user-card {
-  flex-grow: 1;
+.nav {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
-  max-width: 24rem;
-  min-width: 18rem;
-  flex-basis: 20rem;
-  padding: 1rem 1rem 2rem;
-  box-shadow: 0 0 10px var(--card-blue);
-  border-radius: 5px;
-  text-align: center;
-  color: grey;
-}
-
-.edit-btn {
-  align-self: flex-end;
-  border: none;
-  background-color: transparent;
-  color: var(--card-blue);
-  font-size: 1.2rem;
-}
-
-/* HEADER */
-.user-img {
-  width: 7rem;
-  height: 7rem;
-  object-fit: cover;
-  border-radius: 50%;
-  margin: -2rem 0 1rem;
-}
-
-.card-title {
-  color: black;
-  font-size: 1.5rem;
-  margin-bottom: 0.2em;
-}
-
-.geo {
-  font-size: 0.9375rem;
-}
-
-.user-info {
-  font-size: 1.125rem;
-}
-
-/* MEMBERSHIP */
-.membership-section {
-  margin-top: auto;
-  display: flex;
   justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  align-self: stretch;
+  flex-wrap: wrap;
+  column-gap: 10rem;
+  row-gap: 1em;
 }
 
-.membership-title {
-  margin-bottom: 0.5em;
-  font-size: 0.9375rem;
-  text-transform: uppercase;
+.nav > * {
+  flex-grow: 0.5;
+  /* margin-bottom: 1rem; */
 }
 
-.gold-member {
-  color: var(--card-yellow);
-  text-transform: capitalize;
+.logo-container {
+  margin-left: auto;
 }
 
-.renew-btn {
-  border: 2px solid var(--card-green);
-  border-radius: 2px;
-  padding: 0.5em 1em;
-  background-color: white;
-  color: var(--card-green);
-  font-size: 0.9375rem;
-  font-weight: bold;
+.logo-link {
+  display: inline-block;
+  width: 200px;
+  height: 70px;
+  border-radius: 50px;
+  overflow: hidden;
 }
 
-/* SOCIALS */
-.social-title {
-  margin-bottom: 1em;
+.logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nav-links {
+  white-space: nowrap;
+  text-align: right;
+}
+
+.link-item {
+  display: inline-block;
+}
+
+.nav-link {
+  display: inline-block;
+  padding: 1em 2em;
+  border: 2px solid #ef7300;
   font-size: 1.125rem;
-  text-transform: capitalize;
-}
-
-.social-links-list {
-  display: flex;
-  gap: 1rem;
-}
-
-.social-lnk {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.125rem;
-  width: 2em;
-  height: 2em;
-  border: 1px solid var(--card-grey);
-  border-radius: 50%;
+  text-decoration: none;
+  color: aliceblue;
 }
