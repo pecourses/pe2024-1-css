@@ -2,85 +2,64 @@
   box-sizing: border-box;
 }
 
-td,
-th {
-  padding: 10px;
-}
-thead {
-  color: white;
-}
-thead th:nth-child(1) {
-  background-color: #7787a9;
-}
-thead th:nth-child(2) {
-  background-color: #4d628f;
-}
-thead th:nth-child(3) {
-  background-color: #2a4271;
-}
-thead th:nth-child(4) {
-  background-color: #152857;
-}
-tbody th {
-  text-align: left;
-}
-td {
-  text-align: center;
-}
-button {
-  padding: 6px 20px;
+body {
+  font-size: 1.5em;
 }
 
-/* чургування тла по рядках */
-/* tr:nth-child(2n + 1) {
-  background-color: #dbdbdb;
-}
-tr:nth-child(2n) {
-  background-color: #f3f3f3;
-} */
-
-/* чергування тла по стовпцях */
-/* td:nth-child(2n) {
-  background-color: red;
-}
-td:nth-child(2n + 1) {
-  background-color: green;
-}
-tbody th,
-tfoot th {
-  background-color: green;
-} */
-
-/* непарні комірки в непарних рядках */
-tbody tr:nth-child(2n + 1) *:nth-child(2n + 1),
-tfoot tr:nth-child(2n + 1) *:nth-child(2n + 1) {
-  background-color: #dbdbdb;
+.container {
+  border: 5px solid green;
+  position: relative; /*для дочірнього absolute*/
 }
 
-/* парні комірки в парних рядках */
-tbody tr:nth-child(2n) *:nth-child(2n),
-tfoot tr:nth-child(2n) *:nth-child(2n) {
-  background-color: #f3f3f3;
+.child {
+  border: 5px solid blue;
+  width: 150px;
+  height: 150px;
+  background-color: azure;
 }
 
-/* парні комірки в непарних рядках */
-/* непарні комірки в парних рядках */
-tbody tr:nth-child(2n + 1) *:nth-child(2n),
-tfoot tr:nth-child(2n + 1) *:nth-child(2n),
-tbody tr:nth-child(2n) *:nth-child(2n + 1),
-tfoot tr:nth-child(2n) *:nth-child(2n + 1) {
-  background-color: #e6e6e6;
+/* static - default */
+.child:nth-child(1) {
+  position: static;
 }
 
-/* варіант з прозорістю */
-/* tbody tr:nth-child(2n + 1) {
-  background-color: #dbdbdb;
+/* relative
+лишається місце в потоці
+позиціонується відносно свого місця в потоці*/
+.child:nth-child(2) {
+  position: relative;
+  /* top, left, right, bottom */
+  /* bottom: 50px; */
+  /* left: 5px; */
+  /* z-index: 1; */
 }
 
-tbody tr:nth-child(2n) {
-  background-color: #e6e6e6;
+/* absolute 
+не лишається місце в потоці
+позицчонується відносно найближчого позиціонованого предка
+*/
+.child:nth-child(3) {
+  position: absolute;
+  background-color: yellow;
+  /* z-index: -1; */
+  bottom: 50%;
+  left: 100px;
 }
 
-tr td:nth-child(2n) {
-  background-color: #f3f3f330;
-} */
+header {
+  height: 200px;
+  background-image: url("https://www.wfla.com/wp-content/uploads/sites/71/2023/05/GettyImages-1389862392.jpg?w=2560&h=1440&crop=1");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(100, 100, 100, 0.5);
+}
