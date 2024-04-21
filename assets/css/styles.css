@@ -1,29 +1,44 @@
 * {
   box-sizing: border-box;
 }
+/* порядок елемента серед своїх сіблінгів */
+/* --- перший / останній --- */
 
-a {
-  background-color: aqua;
-}
-/* поведінка, стан */
+/* :first-child
+:last-child
+:first-of-type
+:last-of-type */
 
-a:link {
-  background-color: green;
+/* p:last-child {
+  font-weight: bold;
 }
-a:visited {
-  background-color: pink;
-}
-a:hover {
-  background-color: antiquewhite;
-}
-a:active {
-  background-color: red;
-}
-/**/
-/* input {
-  outline: none;
+article :first-child {
+  font-style: italic;
+  font-size: 28px;
 }
 
-input:focus {
-  background-color: blanchedalmond;
+article :first-of-type {
+  color: blueviolet;
 } */
+
+/* --- кожен k-тий, починаючи з певного з номером b --- */
+/* kn+b */
+
+/* p:nth-child(5) {
+  color: green;
+} */
+
+/* 2 4
+7 8 9 10 11 ... */
+p:nth-child(2),
+p:nth-child(4) {
+  color: red;
+}
+
+p:nth-child(n + 7) {
+  color: green;
+}
+
+/* :nth-last-child() */
+/* :nth-of-type() */
+/* :nth-last-of-type() */
