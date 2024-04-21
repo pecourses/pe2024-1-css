@@ -56,12 +56,19 @@ body {
   right: 20px;
   border-radius: 50%;
 }
+:nth-last-of-type()
+/*sticky
+гібрид relative + fixed*/
+.child:nth-child(5) {
+  position: sticky;
+}
 
-p {
-  position: fixed;
-  background-color: blueviolet;
-  padding: 20px;
-  bottom: 10px;
-  left: 10px;
-  right: 10px;
+section {
+  height: 500px;
+  border: 2px solid red;
+}
+
+h2 {
+  position: sticky;
+  top: 0;
 }
