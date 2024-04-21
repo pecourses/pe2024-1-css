@@ -46,20 +46,22 @@ body {
   left: 100px;
 }
 
-header {
-  height: 200px;
-  background-image: url("https://www.wfla.com/wp-content/uploads/sites/71/2023/05/GettyImages-1389862392.jpg?w=2560&h=1440&crop=1");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  position: relative;
+/* fixed
+не лишається місце в потоці
+позицчонується відносно в'юпорта
+ */
+.child:nth-child(4) {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 50%;
 }
 
-.bg {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(100, 100, 100, 0.5);
+p {
+  position: fixed;
+  background-color: blueviolet;
+  padding: 20px;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
 }
