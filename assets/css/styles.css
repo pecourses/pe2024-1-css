@@ -1,17 +1,86 @@
 * {
   box-sizing: border-box;
 }
-body {
-  background-color: aqua;
-}
-table {
-  border-spacing: 0px; /* a-la margin*/
-  border-collapse: collapse; /* схлопування границь */
-}
 
-th,
-td {
-  border: 5px solid aqua;
-  background-color: blue;
+td,
+th {
+  padding: 10px;
+}
+thead {
   color: white;
 }
+thead th:nth-child(1) {
+  background-color: #7787a9;
+}
+thead th:nth-child(2) {
+  background-color: #4d628f;
+}
+thead th:nth-child(3) {
+  background-color: #2a4271;
+}
+thead th:nth-child(4) {
+  background-color: #152857;
+}
+tbody th {
+  text-align: left;
+}
+td {
+  text-align: center;
+}
+button {
+  padding: 6px 20px;
+}
+
+/* чургування тла по рядках */
+/* tr:nth-child(2n + 1) {
+  background-color: #dbdbdb;
+}
+tr:nth-child(2n) {
+  background-color: #f3f3f3;
+} */
+
+/* чергування тла по стовпцях */
+/* td:nth-child(2n) {
+  background-color: red;
+}
+td:nth-child(2n + 1) {
+  background-color: green;
+}
+tbody th,
+tfoot th {
+  background-color: green;
+} */
+
+/* непарні комірки в непарних рядках */
+tbody tr:nth-child(2n + 1) *:nth-child(2n + 1),
+tfoot tr:nth-child(2n + 1) *:nth-child(2n + 1) {
+  background-color: #dbdbdb;
+}
+
+/* парні комірки в парних рядках */
+tbody tr:nth-child(2n) *:nth-child(2n),
+tfoot tr:nth-child(2n) *:nth-child(2n) {
+  background-color: #f3f3f3;
+}
+
+/* парні комірки в непарних рядках */
+/* непарні комірки в парних рядках */
+tbody tr:nth-child(2n + 1) *:nth-child(2n),
+tfoot tr:nth-child(2n + 1) *:nth-child(2n),
+tbody tr:nth-child(2n) *:nth-child(2n + 1),
+tfoot tr:nth-child(2n) *:nth-child(2n + 1) {
+  background-color: #e6e6e6;
+}
+
+/* варіант з прозорістю */
+/* tbody tr:nth-child(2n + 1) {
+  background-color: #dbdbdb;
+}
+
+tbody tr:nth-child(2n) {
+  background-color: #e6e6e6;
+}
+
+tr td:nth-child(2n) {
+  background-color: #f3f3f330;
+} */
