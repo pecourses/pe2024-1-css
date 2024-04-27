@@ -2,73 +2,50 @@
   box-sizing: border-box;
 }
 
+/* псевдоелементи */
 body {
-  font-size: 1.5em;
+  background-color: lightcoral;
 }
 
-.container {
-  border: 5px solid green;
-  position: relative; /*для дочірнього absolute*/
+p {
+  color: brown;
 }
 
-.child {
-  border: 5px solid blue;
-  width: 150px;
-  height: 150px;
-  background-color: azure;
+p::first-letter {
+  color: blue;
+  font-size: 32px;
 }
 
-/* static - default */
-.child:nth-child(1) {
-  position: static;
+p::first-line {
+  color: pink;
 }
 
-/* relative
-лишається місце в потоці
-позиціонується відносно свого місця в потоці*/
-.child:nth-child(2) {
-  position: relative;
-  /* top, left, right, bottom */
-  /* bottom: 50px; */
-  /* left: 5px; */
-  /* z-index: 1; */
-}
-
-/* absolute 
-не лишається місце в потоці
-позицчонується відносно найближчого позиціонованого предка
-*/
-.child:nth-child(3) {
-  position: absolute;
+p::selection {
+  color: yellow;
   background-color: yellow;
-  /* z-index: -1; */
-  bottom: 50%;
-  left: 100px;
 }
 
-/* fixed
-не лишається місце в потоці
-позицчонується відносно в'юпорта
- */
-.child:nth-child(4) {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  border-radius: 50%;
-}
-:nth-last-of-type()
-/*sticky
-гібрид relative + fixed*/
-.child:nth-child(5) {
-  position: sticky;
+li::marker {
+  color: grey;
 }
 
-section {
-  height: 500px;
-  border: 2px solid red;
+p::before {
+  content: "START --";
 }
 
-h2 {
-  position: sticky;
-  top: 0;
+p::after {
+  content: "-- END";
+}
+
+/* додати span і обгорнут його в <<  >> */
+/* span::before {
+  content: "<<";
+}
+span::after {
+  content: ">>";
+} */
+
+span::before,
+span::after {
+  content: "---";
 }
