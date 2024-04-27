@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
 header {
   position: relative;
   display: flex;
@@ -13,7 +17,7 @@ header {
 
   color: white;
   font-family: sans-serif;
-  /* text-align: center; */
+  text-align: center;
 }
 
 .bg {
@@ -25,7 +29,7 @@ header {
   z-index: -1;
   background-image: url(./../images/background.jpg);
   background-repeat: no-repeat;
-  background-position: right bottom;
+  background-position: center;
   background-size: cover;
   filter: blur(10px);
   transition: filter 0.5s ease-in-out;
@@ -48,6 +52,7 @@ h1 {
 
 .header-content {
   filter: blur(0);
+  transition: filter 0.5s ease-in-out;
 }
 
 header:hover .header-content {
