@@ -7,54 +7,22 @@ body {
 }
 
 header {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 20px;
-
   color: white;
-  font-family: sans-serif;
-  text-align: center;
-}
-
-.bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
+  font-size: 30px;
+  padding: 20px;
+  min-height: 100vh;
   background-image: url(./../images/background.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  filter: blur(10px);
-  transition: filter 0.5s ease-in-out;
-}
-
-header:hover .bg {
-  filter: blur(0);
-}
-
-img {
-  width: 140px;
-  height: 140px;
-}
-
-h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  margin: 0.5em 0 1em;
+  position: relative;
 }
 
 .header-content {
-  filter: blur(0);
-  transition: filter 0.5s ease-in-out;
-}
-
-header:hover .header-content {
-  filter: blur(3px);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid red;
+  text-align: center;
 }
