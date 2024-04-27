@@ -1,51 +1,57 @@
 * {
   box-sizing: border-box;
 }
-
-/* псевдоелементи */
 body {
-  background-color: lightcoral;
+  padding: 20px;
+  font-family: sans-serif;
 }
-
-p {
-  color: brown;
+article {
+  position: relative;
+  min-width: 250px;
+  max-width: 350px;
+  width: 100%;
+  padding: 30px;
+  background-image: linear-gradient(to left, #ff6699 0%, #ffcc99 100%);
+  border-radius: 4px;
+  overflow: hidden;
+  color: white;
 }
-
-p::first-letter {
-  color: blue;
-  font-size: 32px;
+.first-line {
+  display: flex;
+  justify-content: space-between;
 }
-
-p::first-line {
-  color: pink;
+.count {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 1em 0 2em;
 }
-
-p::selection {
-  color: yellow;
-  background-color: yellow;
-}
-
-li::marker {
-  color: grey;
-}
-
-p::before {
-  content: "START --";
-}
-
-p::after {
-  content: "-- END";
-}
-
-/* додати span і обгорнут його в <<  >> */
-/* span::before {
-  content: "<<";
-}
-span::after {
-  content: ">>";
+/* .circle {
+  position: absolute;
+  right: -30px;
+  bottom: -75px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
 } */
 
-span::before,
-span::after {
-  content: "---";
+/* DRY */
+article::before,
+article::after {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+article::before {
+  right: -30px;
+  bottom: -75px;
+}
+
+article::after {
+  right: -75px;
+  top: -40px;
 }
