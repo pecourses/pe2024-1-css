@@ -10,7 +10,7 @@ body {
   padding-top: var(--nav-height);
 }
 /* --- nav --- */
-nav {
+.nav {
   min-height: var(--nav-height);
   display: flex;
   align-items: center;
@@ -21,7 +21,7 @@ nav {
   left: 0;
   right: 0;
 }
-nav a {
+.nav-link {
   display: inline-block;
   padding: 0.5em 1em;
   color: inherit;
@@ -29,29 +29,29 @@ nav a {
   text-transform: uppercase;
 }
 
-nav a:hover {
+.nav-link:hover {
   color: black;
   background-color: white;
 }
 
-nav ul {
+.nav-list {
   display: flex;
   transition: right 0.5s ease-in-out;
 }
-.nav {
+.burger {
   padding: 0.5rem;
   margin-left: auto;
   display: none;
 }
-/* --- nav --- */
-header {
+/* --- header --- */
+.main-header {
   position: relative;
   color: white;
 }
-header > img {
+.header-img {
   width: 100%;
 }
-header > div {
+.header-content-wrapper {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -59,46 +59,42 @@ header > div {
   text-align: center;
 }
 /* --- section --- */
-section {
+.band-section {
   max-width: 800px;
   width: 100%;
   margin: 0 auto;
   padding: 1em;
 }
-section h2,
-section h2 + p {
+.band-title,
+.sub-band-title {
   text-align: center;
 }
 
-section > div {
+.band-members-wrapper {
   display: flex;
   gap: 3em;
   padding: 0 2em;
 }
-section img {
+.band-member {
   width: 100%;
 }
-figcaption {
+.band-member-figure {
   text-align: center;
 }
 
 @media screen and (max-width: 600px) {
-  section > div {
-    flex-direction: column;
-    gap: 1em;
-    padding: 0 3em;
-  }
-  .nav {
+  /* --- nav --- */
+  .burger {
     display: block;
   }
-  nav {
+  .nav {
     z-index: 1;
   }
-  nav ul a {
+  .burger-link {
     background-color: black;
     width: 100%;
   }
-  nav ul {
+  .nav-list {
     position: absolute;
     z-index: 2;
     top: 0;
@@ -107,8 +103,14 @@ figcaption {
     flex-direction: column;
     text-align: center;
   }
-  .nav:hover + ul,
-  ul:hover {
+  .burger:hover + .nav-list,
+  .nav-list:hover {
     right: 0;
+  }
+  /* --- section --- */
+  .band-members-wrapper {
+    flex-direction: column;
+    gap: 1em;
+    padding: 0 3em;
   }
 }
