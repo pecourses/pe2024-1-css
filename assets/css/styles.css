@@ -28,10 +28,17 @@ nav a {
   text-decoration: none;
   text-transform: uppercase;
 }
-nav > ul {
-  display: flex;
+
+nav a:hover {
+  color: black;
+  background-color: white;
 }
-nav > div {
+
+nav ul {
+  display: flex;
+  transition: right 0.5s ease-in-out;
+}
+.nav {
   padding: 0.5rem;
   margin-left: auto;
   display: none;
@@ -80,5 +87,27 @@ figcaption {
     flex-direction: column;
     gap: 1em;
     padding: 0 3em;
+  }
+  .nav {
+    display: block;
+  }
+  nav {
+    z-index: 1;
+  }
+  nav a {
+    background-color: black;
+    width: 100%;
+  }
+  nav ul {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+  }
+  .nav-hover:hover ul {
+    right: 0;
   }
 }
