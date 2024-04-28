@@ -94,7 +94,7 @@ figcaption {
   nav {
     z-index: 1;
   }
-  nav a {
+  nav ul a {
     background-color: black;
     width: 100%;
   }
@@ -107,7 +107,8 @@ figcaption {
     flex-direction: column;
     text-align: center;
   }
-  .nav-hover:hover ul {
+  .nav:hover + ul,
+  ul:hover {
     right: 0;
   }
 }
